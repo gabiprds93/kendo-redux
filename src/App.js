@@ -65,7 +65,7 @@ class App extends Component {
             </Col>
             <Col className="text-right" xs={8} md={8}>
               <a className="y-ashop" >Shopping Cart
-            <span><span data-bind="text: cart.contentsCount">0</span> items</span>
+            <span  className="y-spanrosa"><span data-bind="text: cart.contentsCount">0</span> items</span>
               </a>
             </Col>
           </Row>
