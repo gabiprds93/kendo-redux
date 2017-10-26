@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import {connect} from 'redux-zero/react';
 import './App.css';
 import { Grid, Row, Col, Thumbnail } from 'react-bootstrap';
-// import background from '/images/background-image.png';
 import { Button } from 'react-bootstrap';
 
-const Home = () => {
+const Home = ({food,selectedItem}) => {
   return(
     <Grid>
     <Row>
@@ -54,27 +54,6 @@ const Home = () => {
   )
 }
 
-class App extends Component {
-  render() {
-    return (
-      <div >
-        <Grid className="y-acontain">
-          <Row className="show-grid">
-            <Col xs={4} md={4}>
-              <h1>SUSH.</h1>
-            </Col>
-            <Col className="text-right" xs={8} md={8}>
-              <a className="y-ashop" >Shopping Cart
-            <span  className="y-spanrosa"><span data-bind="text: cart.contentsCount">0</span> items</span>
-              </a>
-            </Col>
-          </Row>
-          <hr />
-        </Grid>
-        <Home />
-      </div>
-    );
-  }
-}
+const mapToProps = ({food,selectedItem}) =>({food,selectedItem});
 
-export default App;
+export default connect(mapToProps)(Home);
