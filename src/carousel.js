@@ -41,6 +41,9 @@ const ControlledCarousel = React.createClass({
                     </div>
                     </Col>
                     <Col className='show-menus' xs={12} md={8} >
+                    <div>
+                        Nutritional Information
+                    </div>
                     </Col>
                 </Row>
             </Grid>
