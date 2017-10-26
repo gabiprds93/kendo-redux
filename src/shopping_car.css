@@ -1,0 +1,196 @@
+#ys-shopInfo {
+    height: 122px;
+    background: #000000;
+    margin-bottom: 20px;
+    overflow: hidden;
+    -webkit-transition: all 200ms ease-out;
+}
+
+#ys-shopInfo.empty {
+    height: 0px;
+}
+
+#ys-shopInfo:after:after{
+    content:"";
+    clear:both;
+    display: block;
+}
+
+/*SHOPPING CAR*/
+#ys-shopList {
+    background: #000000;
+    width: 800px;
+    float: left;
+    text-align: right;
+    font-size: 10px;
+}
+
+#ys-shopList li{
+    float: left;
+    width: 100px;
+}
+
+.ys-widget {
+    background-color: #fff;
+}
+.ys-listview {
+    border: 0;
+    position: relative;
+    zoom: 1;
+}
+
+.ys-viewSelectedItem, .ys-viewSelectedItem:hover {
+    display: block;
+    position: relative;
+}
+
+.ys-viewSelectedItem, .ys-viewSelectedItem:hover {
+    display: block;
+    position: relative;
+}
+
+.ys-viewSelectedItem:hover {
+    cursor: pointer;
+}
+
+.ys-viewSelectedItem:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0);
+}
+
+.ys-viewSelectedItem:hover:after {
+    background-color:  rgba(0,0,0,0.75);
+    background-image: url('https://www.materialui.co/materialIcons/content/remove_white_192x192.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size:40%; 
+}
+
+
+.ys-selectedImagePrice{
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 20px;
+    vertical-align: middle;
+
+}
+.ys-selectedProdList{
+    position: relative;
+    width: 100px;
+}
+/*SHOPPING CAR*/
+
+#ys-divshoppingcar{
+    position: relative;
+    text-align: right;
+    float: right;
+    width: 200px;
+    background-color: #1f1f1f;
+    height: 100%;
+}
+
+#ys-divshoppingcar h3, #ys-divshoppingcar p{
+    text-align: left;
+}
+
+
+#ys-divshoppingcar h3{
+    padding-top: 20px;
+    padding-left: 14px;
+    margin-bottom: 7px;
+    color: #bababa;
+    font-size: 10px;
+    text-transform: uppercase;
+    list-style: none outside none;
+    padding: 0;
+    border: 0;
+}
+.ys-totalPrice{
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 9px;
+    position: relative;
+    padding-left: 14px;
+    padding-right: 20px;
+    line-height: .9em;
+    overflow: hidden;
+}
+
+#ys-divshoppingcar div{
+    display: inline-block;
+}
+
+#ys-emptycar{
+    display: inline-block;
+    width: 89px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #ff3170;
+    background-color: #1f1f1f;
+    letter-spacing: 1px;
+}
+
+
+#ys-emptycar:hover{
+    text-decoration: underline;
+}
+
+#ys-checkout{
+    display: inline-block;
+    background: rgb(214,0,65);
+    background: -moz-linear-gradient(top,  rgba(214,0,65,1) 0%, rgba(169,0,64,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(214,0,65,1)), color-stop(100%,rgba(169,0,64,1)));
+    background: -webkit-linear-gradient(top,  rgba(214,0,65,1) 0%,rgba(169,0,64,1) 100%);
+    background: -o-linear-gradient(top,  rgba(214,0,65,1) 0%,rgba(169,0,64,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(214,0,65,1) 0%,rgba(169,0,64,1) 100%);
+    background: linear-gradient(to bottom,  rgba(214,0,65,1) 0%,rgba(169,0,64,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d60041', endColorstr='#a90040',GradientType=0 );
+    position: relative;
+    padding: 0 18px 0 10px;
+    color: #ffffff;
+    height: 28px;
+    width: 100px;
+    line-height: 28px;
+    vertical-align: middle;
+    font-size: 10px;
+    text-transform: uppercase;
+    background-color: #1f1f1f;
+    letter-spacing: 1px;
+}
+
+#ys-checkout:before {
+    content:"";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top: 14px solid #1f1f1f;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 14px solid #1f1f1f;
+}
+
+#ys-checkout:hover{
+
+    background: rgb(214,0,65);
+    background: -moz-linear-gradient(top,  rgba(169,0,64,1) 0%, rgba(214,0,65,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(169,0,64,1)), color-stop(100%,rgba(214,0,65,1)));
+    background: -webkit-linear-gradient(top,  rgba(169,0,64,1) 0%,rgba(214,0,65,1) 100%);
+    background: -o-linear-gradient(top,  rgba(169,0,64,1) 0%,rgba(214,0,65,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(169,0,64,1) 0%,rgba(214,0,65,1) 100%);
+    background: linear-gradient(to bottom,  rgba(169,0,64,1) 0%,rgba(214,0,65,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d60041', endColorstr='#a90040',GradientType=0 );
+    color: #ffffff;
+}
+
