@@ -1,28 +1,41 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body{
+  background-image: url('http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/background-image.png');
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.y-acontain{
+  margin-top: 5%;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.add-to-cart {
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  padding-bottom: 3px;
+  color: #d60041;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-top: 1px dotted #a6a6a6;
+}
+.add-to-cart:hover{
+  color: #FDFDFD;
+  background-color: #d60041;
 }
 
-.App-intro {
-  font-size: large;
+.y-ashop {
+  float: right;
+  /* height: 28px; */
+  line-height: 28px;
+  /* vertical-align: middle; */
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #bababa;
+  background-color: #000000;
+  padding-left: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
+
