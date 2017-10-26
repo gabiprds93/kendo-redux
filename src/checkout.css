@@ -1,0 +1,55 @@
+.yc-title-col{
+    font-weight: bold;
+}
+
+.yc-row, .yc-title-col, .yc-hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.yc-btn-order{
+    background:linear-gradient(to bottom, #E4024A 0%,#CE0552 100%);
+    text-align: center;
+}
+
+.yc-btn-p{
+    color: white;
+}
+
+.yc-cancel-col,.yc-cancel{
+    color:#CE0552;
+    text-align: right;
+    padding-right:0px;
+}
+
+.yc-copyright{
+    font-size: 12px;
+}
+
+.yc-copyright-a{
+    color: #CE0552;
+}
+
+
+
+.yc-grid-container{
+    background: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.yc-h1title-order{
+    font-weight: bold;
+}
+
+.yc-grid-container-image{
+    background-image: url(images/sushi-preview.png);
+    padding-left:0px;
+    padding: right;
+}
+
+.yc-grid-container-final{
+    padding: 5%;
+}
