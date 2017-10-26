@@ -29,30 +29,29 @@ const ControlledCarousel = React.createClass({
         <Carousel.Item> <br/>
             <Grid>
                 <Row>
-                    <Col className='show-menus' xs={6} md={4}>
-                    <img
+                    <Col   md={10}>
+                    <div>
+                    {/* <img
                         className='m-image'
                         width={190}
                         height={190}
-                        alt="900x500"
                         src="http://sm.ign.com/ign_latam/screenshot/o/onepiece-u/onepiece-uvh4jpg_es4n.jpg"
-                    />
-                    <div>
+                    /> */}
                     </div>
                     </Col>
-                    <Col className='show-menus' xs={12} md={8} >
+                    <Col  md={2} >
                     <div>
                         Nutritional Information
                     </div>
                     </Col>
                 </Row>
             </Grid>
-          
-          {/* <Carousel.Caption>
+{/*           
+          <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption> */}
-        {/* </Carousel.Item>
+          </Carousel.Caption>  */}
+         </Carousel.Item>
         <Carousel.Item>
           <img
             width={150}
@@ -77,7 +76,7 @@ const ControlledCarousel = React.createClass({
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
-          </Carousel.Caption>*/}
+          </Carousel.Caption>
         </Carousel.Item> 
       </Carousel>
     );

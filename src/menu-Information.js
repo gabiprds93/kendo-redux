@@ -5,12 +5,12 @@ import ControlledCarousel from "./carousel.js";
 
 const MenuInformation = () => {
   return (
-    <Grid className="container-fluid block">
-      <Row className="show-grid top-image" />
-      <Row className="show-grid details">
+    <Grid className=" block">
+      <Row className="m-show-grid m-top-image" />
+      <Row className="m-show-grid m-details">
         <ControlledCarousel />
       </Row>
-      <Row className="show-grid bottom-image" />
+      <Row className="m-show-grid m-bottom-image" />
     </Grid>
   );
 };
