@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'redux-zero/react';
 import store from './store';
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import {HashRouter, Switch, Route} from 'react-router-dom';
+import {Grid, Row, Col} from 'react-bootstrap';
 import Home from './Home'
 const Index = () => (
   <Provider store={store}>
