@@ -5,6 +5,55 @@ import { Grid, Row, Col, Thumbnail } from 'react-bootstrap';
 // import background from '/images/background-image.png';
 import { Button } from 'react-bootstrap';
 
+const Home = () => {
+  return(
+    <Grid>
+    <Row>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+    </Row>
+  </Grid>
+  )
+}
+
 class App extends Component {
   render() {
     return (
@@ -21,49 +70,8 @@ class App extends Component {
             </Col>
           </Row>
           <hr />
-          <Row>
-            <Col xs={6} md={4}>
-              <Thumbnail src="" alt="242x200">
-                <h3>Thumbnail label</h3>
-                <p>Description</p>
-                <hr />
-                <button className="add-to-cart">Add to cart</button>
-              </Thumbnail>
-            </Col>
-            <Col xs={6} md={4}>
-              <Thumbnail src="" alt="242x200">
-                <h3>Thumbnail label</h3>
-                <p>Description</p>
-                <hr />
-                <button className="add-to-cart">Add to cart</button>
-              </Thumbnail>
-            </Col>
-            <Col xs={6} md={4}>
-              <Thumbnail src="" alt="242x200">
-                <h3>Thumbnail label</h3>
-                <p>Description</p>
-                <hr />
-                <button className="add-to-cart">Add to cart</button>
-              </Thumbnail>
-            </Col>
-            <Col xs={6} md={4}>
-              <Thumbnail src="" alt="242x200">
-                <h3>Thumbnail label</h3>
-                <p>Description</p>
-                <hr />
-                <button className="add-to-cart">Add to cart</button>
-              </Thumbnail>
-            </Col>
-            <Col xs={6} md={4}>
-              <Thumbnail src="" alt="242x200">
-                <h3>Thumbnail label</h3>
-                <p>Description</p>
-                <hr />
-                <button className="add-to-cart">Add to cart</button>
-              </Thumbnail>
-            </Col>
-          </Row>
         </Grid>
+        <Home />
       </div>
     );
   }
