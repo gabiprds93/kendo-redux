@@ -47,16 +47,15 @@ const Shopping_car = () => {
 
     return (
 
-        <Grid >
+        <Grid className="container-fluid">
             <Row id="ys-shopInfo" className="active" >
-                <Col xs={12} md={9}>
+                <Col xs={12} md={9} className="divDish">
                     <ul id="ys-shopList" className="ys-widget ys-listview">
                         <SushiDish />
                     </ul>
                 </Col>
-                <Col xs={12} md={3}>
-                    <YourShoppingCar />
-                </Col>
+                <YourShoppingCar />
+
             </Row>
         </Grid>
     );

@@ -23,6 +23,11 @@
     float: left;
     text-align: right;
     font-size: 10px;
+    padding: 0px;
+}
+
+.divDish{
+    padding-left: 0px;
 }
 
 #ys-shopList li{
@@ -35,7 +40,6 @@
 }
 .ys-listview {
     border: 0;
-    position: relative;
     zoom: 1;
 }
 
