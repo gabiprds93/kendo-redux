@@ -5,24 +5,18 @@ import './App.css';
 import {addToCart} from './actions';
 import { Grid, Row, Col, Thumbnail } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import data from './data'
+
 
 const Maps = ({ item, index, addToCart }) => {
   return (
-    // <Grid>
-    //   <Row>
-    //     <Col sm={3} md={3} lg={3}>
-          <div className="y-aplates">
-            <a className="view-details" href="#/menu/1">
-              <img classname="y-aimg" src={item.image} />
-            </a>
-            <strong className='y-astron'>{item.name}</strong>
-            <span className="y-a-price"><span>$</span><span data-bind="text: price">{item.price}</span></span>
-            <button className="add-to-cart" onClick={addToCart}>Add to cart</button>
-          </div>
-        /* </Col>
-      </Row>
-    </Grid> */
+    <div className="y-aplates">
+      <a className="view-details" href="#/menu/1">
+        <img classname="y-aimg" src={item.image} />
+      </a>
+      <strong className='y-astron'>{item.name}</strong>
+      <span className="y-a-price"><span>$</span><span data-bind="text: price">{item.price}</span></span>
+      <button className="add-to-cart" onClick={addToCart}>Add to cart</button>
+    </div>
   )
 }
 

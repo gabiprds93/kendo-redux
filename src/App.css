@@ -3,7 +3,8 @@ body{
   background-image: url('http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/background-image.png');
 }
 .y-acontain{
-  display: block;
+  margin-left: 12%;
+  margin-right: 12%;
   margin-top: 5%;
   color: white;
 }
@@ -29,7 +30,7 @@ body{
   height: 28px;
   line-height: 28px;
   vertical-align: middle;
-  font-size: 11px;
+  /* font-size: 11px; */
   text-transform: uppercase;
   color: #bababa;
   background-color: #000000;
