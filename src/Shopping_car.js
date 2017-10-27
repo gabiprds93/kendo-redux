@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "redux-zero/react";
 import Edamame from './images/edamame.jpg';
 import { Grid, Row, Col } from 'react-bootstrap';
+import {HashRouter, Switch, Route, NavLink} from 'react-router-dom';
 //import { addComment} from "./actions";
 import './shopping_car.css';
 
@@ -28,7 +29,7 @@ const YourShoppingCar = () => {
         <div id="ys-divshoppingcar">
             <h3>your<br />shopping car</h3>
             <p className="ys-totalPrice">$0.00</p>
-            <a id="ys-emptycar">empty car</a><a id="ys-checkout">checkout</a>
+            <NavLink to="/checkout"><a id="ys-emptycar">empty car</a><a id="ys-checkout">checkout</a></NavLink>
         </div>
     );
 }

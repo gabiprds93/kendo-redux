@@ -198,3 +198,6 @@
     color: #ffffff;
 }
 
+.visible{
+    display: none;
+}
