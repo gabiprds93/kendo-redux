@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "redux-zero/react";
+
+import { HashRouter, Switch, Route, NavLink } from 'react-router-dom';
+
 // import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
@@ -61,10 +64,12 @@ const Checkout = ({ foodUser, total }) => {
                         <Row className="show-grid">
                             <Col className="yc-btnnow-col" sm={6} md={6}><br /></Col>
                             <Col className="yc-cancel-col" sm={6} md={3}><br />
-                                <a className="yc-cancel">CANCEL ORDER</a>
+                            <NavLink to="/"><a className="yc-cancel">CANCEL ORDER</a></NavLink>
                             </Col>
                             <Col className="yc-btnnow-col" sm={6} md={3}><br />
-                                <Button className="yc-btn-order"><p className="yc-btn-p">ORDER NOW!</p></Button>
+                            {/* <NavLink to="/checkout"><a id="ys-emptycar">empty car</a><a id="ys-checkout">checkout</a></NavLink> */}
+
+                            <NavLink to="/"><Button className="yc-btn-order"><p className="yc-btn-p">ORDER NOW!</p></Button></NavLink>
                             </Col>
                         </Row>
                     </Grid>
