@@ -20,4 +20,4 @@ export const addToCart = (index) => {
         foodUser: addDish
     });
     console.log('foodUser', store.getState().foodUser); 
-
+}
