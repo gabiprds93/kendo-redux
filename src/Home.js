@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { connect } from 'redux-zero/react';
+import {connect} from 'redux-zero/react';
 import './App.css';
 import { Grid, Row, Col, Thumbnail } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
