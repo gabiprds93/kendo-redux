@@ -9,19 +9,19 @@ import { Grid, Row, Col, Button } from 'react-bootstrap';
 
 
 const Checkout = ({ reportAdd, total }) => {
-    const ycProducts = reportAdd.map((sushi, index) => {
-        return (
-            <div>
-            <hr className="yc-hr" />
-            <Row className="show-grid yc-row" classID="">
-                < Col className="yc-report-col" sm={6} md={3}><br /><img src={sushi.image}></img></Col>
-                <Col className="yc-report-col" sm={6} md={3}><br />{sushi.name}</Col>
-                <Col className="yc-report-col" sm={6} md={3}><br /><input type="Number"></input></Col>
-                <Col className="yc-report-col" sm={6} md={3}><br />{sushi.price}</Col>
-            </Row>
-            </div>
-        );
-    });
+    // const ycProducts = reportAdd.map((sushi, index) => {
+    //     return (
+    //         <div>
+    //         <hr className="yc-hr" />
+    //         <Row className="show-grid yc-row" classID="">
+    //             < Col className="yc-report-col" sm={6} md={3}><br /><img src={sushi.image}></img></Col>
+    //             <Col className="yc-report-col" sm={6} md={3}><br />{sushi.name}</Col>
+    //             <Col className="yc-report-col" sm={6} md={3}><br /><input type="Number"></input></Col>
+    //             <Col className="yc-report-col" sm={6} md={3}><br />{sushi.price}</Col>
+    //         </Row>
+    //         </div>
+    //     );
+    // });
 
     return (
         <div className="yc-container">
@@ -42,7 +42,7 @@ const Checkout = ({ reportAdd, total }) => {
                                 <h7 className="yc-total">TOTAL:</h7>
                             </Col>
                             <Col className="yc-btnnow-col" sm={6} md={2}>
-                                <h2>${total.toFixed(2)}</h2>
+                                {/* <h2>${total.toFixed(2)}</h2> */}
                             </Col>
                         </Row>
                         <hr className="yc-hr" />

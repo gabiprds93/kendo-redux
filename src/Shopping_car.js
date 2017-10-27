@@ -9,10 +9,6 @@ import './shopping_car.css';
 //const SushiDish = ({ image, price }) => {
 const SushiDish = () => {
 
-    /* <div>
-        <img src={image} className="ys-Img" />
-        <p>1 x {price}</p>
-    </div> */
     return (
 
         <li className="ys-selectedProdList" aria-selected="false">

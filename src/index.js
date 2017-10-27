@@ -7,8 +7,10 @@ import store from './store';
 import {HashRouter, Switch, Route,NavLink,Redirect} from 'react-router-dom';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Home from './Home'
+import Shopping_car from './Shopping_car'
 import Checkout from './checkout'
 import yakiUdon from './images/logo.png';
+import MenuInformation from './menu-Information'
 
 const Index = () => 
 {
@@ -29,10 +31,16 @@ const Index = () =>
                     </Col>
                 </Row>
                 <hr />
+                <Row>
+                    <Shopping_car/>
+                </Row>
+                <hr />
             </Grid> 
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path="/checkout" component={Checkout} />        
+                        <Route path="/checkout" component={Checkout} /> 
+                        <Route path="/menuInformation" component={MenuInformation} />        
+       
                     </Switch>
                     
         </div>
