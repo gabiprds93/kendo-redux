@@ -19,5 +19,5 @@ export const addToCart = (index) => {
     store.setState({
         foodUser: addDish
     });
-    console.log('foodUser', store.getState().foodUser); 
-
+    
+}

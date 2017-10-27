@@ -27,7 +27,7 @@ const Home = ({ food, selectedItem }) => {
     <div className='y-acont'>
       {
         food.map((item, index) => {
-          return <Maps key={index} item={item} index={index}  selectMenu={() =>selectMenu(index)  addToCart={()=>addToCart(index)} />
+          return <Maps key={index} item={item} index={index}  selectMenu={() =>selectMenu(index)}  addToCart={()=>addToCart(index)} />
         })
       }
     </div>
