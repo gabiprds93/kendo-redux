@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import {connect} from 'redux-zero/react';
+import MenuInformation from './menu-Information.js'
 import './App.css';
 import { Grid, Row, Col, Thumbnail } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
@@ -50,6 +51,7 @@ const Home = ({food,selectedItem}) => {
         </Thumbnail>
       </Col>
     </Row>
+    <MenuInformation food = {food} selectedItem={selectedItem}/>
   </Grid>
   )
 }

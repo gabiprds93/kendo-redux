@@ -1,86 +1,88 @@
 import React, { Component } from "react";
 import "./menu-Information.css";
-import { Carousel } from "react-bootstrap";
-import { Grid, Row, Col } from "react-bootstrap";
+import { Grid, Row, Col, Table, Button } from "react-bootstrap";
+import MenuInformation from "./menu-Information";
+import store from "./store";
+import Slider from "react-slick";
 
-const ControlledCarousel = React.createClass({
-  getInitialState() {
-    return {
-      index: 0,
-      direction: null
-    };
-  },
+const Carousel = ({ food, selectedItem }) => {
+  class SimpleSlider extends React.Component {
+    render() {
+      var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
+      const menuTd = food.map((a, index) => {
+        return (
+          <div className="row">
+            <div className="col-md-3">
+              <div />
+              <img
+                src={a.image} 
+              />
+            </div>
+            <div className="col-md-6 m-colI">
+              <h1>{a.name}</h1>
+              <small id='m-small'>{a.description}</small>
+              <br/><br/><br/>
+              <div className='m-line' >
+                <label><p id="price-quantity">$ {a.price}</p></label>
+                <Button bsClass="m-Add ">Add to cart</Button>
+              </div>
+            </div>
+            <Table responsive className="col-md-3 m-table ">
+            <br/>
+              <tr>
+                <th colSpan='2'>
+                  Nutritional Information
+                </th>
+              </tr><br/>
+              <tr>
+                <td>Protein</td>
+                <td>{a.protein}</td>
+              </tr>
+              <tr>
+                <td>Fat(total)</td>
+                <td>{a.fat}</td>
+              </tr>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>{a.carbohydrate}</td>
+              </tr>
+              <tr>
+                <td>Energy(k)</td>
+                <td>{a.energykJ}</td>
+              </tr>
+              <tr>
+                <td>Energy(kcal)</td>
+                <td>{a.energykcal}</td>
+              </tr>
 
-  handleSelect(selectedIndex, e) {
-    //   alert(`selected=${selectedIndex}, direction=${e.direction}`);
-    this.setState({
-      index: selectedIndex,
-      direction: e.direction
-    });
-  },
-
-  render() {
-    return (
-      <Carousel
-        activeIndex={this.state.index}
-        direction={this.state.direction}
-        onSelect={this.handleSelect}
-      >
-        <Carousel.Item> <br/>
-            <Grid>
-                <Row>
-                    <Col   md={10}>
-                    <div>
-                    {/* <img
-                        className='m-image'
-                        width={190}
-                        height={190}
-                        src="http://sm.ign.com/ign_latam/screenshot/o/onepiece-u/onepiece-uvh4jpg_es4n.jpg"
-                    /> */}
-                    </div>
-                    </Col>
-                    <Col  md={2} >
-                    <div>
-                        Nutritional Information
-                    </div>
-                    </Col>
-                </Row>
-            </Grid>
-{/*           
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>  */}
-         </Carousel.Item>
-        <Carousel.Item>
-          <img
-            width={150}
-            height={300}
-            alt="900x500"
-            src="https://estaciongeek.mx/wp-content/uploads/2017/07/OnePiece_LiveAction_Hollywood.png"
-          />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            width={150}
-            height={300}
-            alt="900x500"
-            src="http://ramenparados.com/wp-content/uploads/2016/02/onepiece1-1000x600.jpg"
-          />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item> 
-      </Carousel>
-    );
+              <tr>
+                <td>Sugar</td>
+                <td>{a.sugar}</td>
+              </tr>
+            </Table>
+          </div>
+        );
+      });
+      return (
+        <Slider {...settings}>
+          <div className="container">
+            {menuTd}
+          </div>
+        </Slider>
+      );
+    }
   }
-});
+  return (
+    <div>
+      <SimpleSlider />
+    </div>
+  );
+};
 
-export default ControlledCarousel;
+export default Carousel;

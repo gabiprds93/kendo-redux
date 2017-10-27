@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./menu-Information.css";
 import { Grid, Row, Col } from "react-bootstrap";
-import ControlledCarousel from "./carousel.js";
+import Carousel from "./carousel.js";
 
-const MenuInformation = () => {
+const MenuInformation = ({food, selectedItem }) => {
   return (
-    <Grid className=" block">
+    <Grid className="m-block">
       <Row className="m-show-grid m-top-image" />
       <Row className="m-show-grid m-details">
-        <ControlledCarousel />
+        <Carousel food={food} selectedItem={selectedItem} />
       </Row>
       <Row className="m-show-grid m-bottom-image" />
     </Grid>
