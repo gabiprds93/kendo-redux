@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "redux-zero/react";
 import Edamame from './images/edamame.jpg';
+// import {totalPrice} from './actions';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { HashRouter, Switch, Route, NavLink } from 'react-router-dom';
 //import { addComment} from "./actions";
