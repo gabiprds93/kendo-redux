@@ -13,11 +13,14 @@ import yakiUdon from './images/logo.png';
 const Index = () => 
 {
     return(
-        <div >
-            <Grid className="y-acontain">
+        
+            <Provider store={store}>
+                <HashRouter>
+                <div >
+                <Grid className="y-acontain">
                 <Row className="show-grid">
                     <Col xs={4} md={4}>
-                    <NavLink to={"/home"}><img src={yakiUdon} /></NavLink>
+                    <NavLink to={"/"}><img src={yakiUdon} /></NavLink>
                     </Col>
                     <Col className="text-right" xs={8} md={8}>
                         <a className="y-ashop" >Shopping Cart
@@ -27,15 +30,14 @@ const Index = () =>
                 </Row>
                 <hr />
             </Grid> 
-            <Provider store={store}>
-                <HashRouter>
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/checkout" component={Checkout} />        
                     </Switch>
+                    
+        </div>
                 </HashRouter>
             </Provider>
-        </div>
     )
 }
 
