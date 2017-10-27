@@ -3,6 +3,7 @@ import {SUSHI} from './data'
 
 const initialState = {
     food: SUSHI,
+    foodUser: [],
     selectedItem : -1,
     
 }

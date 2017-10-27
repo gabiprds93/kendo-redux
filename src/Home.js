@@ -1,61 +1,44 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import {connect} from 'redux-zero/react';
-import MenuInformation from './menu-Information.js'
 import './App.css';
 import { Grid, Row, Col, Thumbnail } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import data from './data'
 
-const Home = ({food,selectedItem}) => {
-  return(
-    <Grid>
-    <Row>
-      <Col xs={6} md={4}>
-        <Thumbnail src="" alt="242x200">
-          <h3>Thumbnail label</h3>
-          <p>Description</p>
-          <hr />
-          <button className="add-to-cart">Add to cart</button>
-        </Thumbnail>
-      </Col>
-      <Col xs={6} md={4}>
-        <Thumbnail src="" alt="242x200">
-          <h3>Thumbnail label</h3>
-          <p>Description</p>
-          <hr />
-          <button className="add-to-cart">Add to cart</button>
-        </Thumbnail>
-      </Col>
-      <Col xs={6} md={4}>
-        <Thumbnail src="" alt="242x200">
-          <h3>Thumbnail label</h3>
-          <p>Description</p>
-          <hr />
-          <button className="add-to-cart">Add to cart</button>
-        </Thumbnail>
-      </Col>
-      <Col xs={6} md={4}>
-        <Thumbnail src="" alt="242x200">
-          <h3>Thumbnail label</h3>
-          <p>Description</p>
-          <hr />
-          <button className="add-to-cart">Add to cart</button>
-        </Thumbnail>
-      </Col>
-      <Col xs={6} md={4}>
-        <Thumbnail src="" alt="242x200">
-          <h3>Thumbnail label</h3>
-          <p>Description</p>
-          <hr />
-          <button className="add-to-cart">Add to cart</button>
-        </Thumbnail>
-      </Col>
-    </Row>
-    <MenuInformation food = {food} selectedItem={selectedItem}/>
-  </Grid>
+const Maps = ({ item, index }) => {
+  return (
+    // <Grid>
+    //   <Row>
+    //     <Col sm={3} md={3} lg={3}>
+          <div className="y-aplates">
+            <a className="view-details" href="#/menu/1">
+              <img classname="y-aimg" src={item.image} />
+            </a>
+            <strong className='y-astron'>{item.name}</strong>
+            <span className="y-a-price"><span>$</span><span data-bind="text: price">{item.price}</span></span>
+            <button className="add-to-cart" data-bind="click: addToCart">Add to cart</button>
+          </div>
+        /* </Col>
+      </Row>
+    </Grid> */
   )
 }
 
-const mapToProps = ({food,selectedItem}) =>({food,selectedItem});
+const Home = ({ food, selectedItem }) => {
+  return (
+    <Grid>
+    <div className='y-acont'>
+      {
+        food.map((item, index) => {
+          return <Maps key={index} item={item} index={index} />
+        })
+      }
+    </div>
+    </Grid>
+  )
+}
+
+const mapToProps = ({ food, selectedItem }) => ({ food, selectedItem });
 
 export default connect(mapToProps)(Home);
