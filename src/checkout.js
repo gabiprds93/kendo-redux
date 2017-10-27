@@ -1,27 +1,41 @@
 import React, { Component } from 'react';
 import { connect } from "redux-zero/react";
+
+import { HashRouter, Switch, Route, NavLink } from 'react-router-dom';
+
 // import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
+import {totalPrice} from './actions';
 import './checkout.css';
 // importado de react-bootstrap
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 
+const CheckoutReport = ({image,name,price})=>{
+    return (
+        <div>
+            <hr className="yc-hr" />
+            <Row className="show-grid yc-row" classID="">
+                < Col className="yc-report-col" sm={6} md={3}><br /><img src={image}></img></Col>
+                <Col className="yc-report-col" sm={6} md={3}><br />{name}</Col>
+                <Col className="yc-report-col" sm={6} md={3}><br /><input type="Number"></input></Col>
+                <Col className="yc-report-col" sm={6} md={3}><br />{price}</Col>
+            </Row>
+        </div>
+    );
+}
 
-const Checkout = ({ reportAdd, total }) => {
-    // const ycProducts = reportAdd.map((sushi, index) => {
-    //     return (
-    //         <div>
-    //         <hr className="yc-hr" />
-    //         <Row className="show-grid yc-row" classID="">
-    //             < Col className="yc-report-col" sm={6} md={3}><br /><img src={sushi.image}></img></Col>
-    //             <Col className="yc-report-col" sm={6} md={3}><br />{sushi.name}</Col>
-    //             <Col className="yc-report-col" sm={6} md={3}><br /><input type="Number"></input></Col>
-    //             <Col className="yc-report-col" sm={6} md={3}><br />{sushi.price}</Col>
-    //         </Row>
-    //         </div>
-    //     );
-    // });
+const Checkout = ({ foodUser, total }) => {
+    const UserSushi = foodUser.map((sushiUser, index) => {
+        return (
+            <CheckoutReport
+                key={index}
+                image={sushiUser.image}
+                name={sushiUser.name}
+                price={sushiUser.price}
+            />
+        );
+    });
 
     return (
         <div className="yc-container">
@@ -35,6 +49,7 @@ const Checkout = ({ reportAdd, total }) => {
                             <Col className="yc-title-col" sm={6} md={3}><br />QUANTITY</Col>
                             <Col className="yc-title-col" sm={6} md={3}><br />PRICE</Col>
                         </Row>
+                        {UserSushi}
                         <hr className="yc-hr" />
                         <Row className="show-grid">
                             <Col className="yc-btnnow-col" sm={6} md={9}><br /></Col>
@@ -42,17 +57,19 @@ const Checkout = ({ reportAdd, total }) => {
                                 <h7 className="yc-total">TOTAL:</h7>
                             </Col>
                             <Col className="yc-btnnow-col" sm={6} md={2}>
-                                {/* <h2>${total.toFixed(2)}</h2> */}
+                                <h2>${totalPrice().toFixed(2)}</h2>
                             </Col>
                         </Row>
                         <hr className="yc-hr" />
                         <Row className="show-grid">
                             <Col className="yc-btnnow-col" sm={6} md={6}><br /></Col>
                             <Col className="yc-cancel-col" sm={6} md={3}><br />
-                                <a className="yc-cancel">CANCEL ORDER</a>
+                            <NavLink to="/"><a className="yc-cancel">CANCEL ORDER</a></NavLink>
                             </Col>
                             <Col className="yc-btnnow-col" sm={6} md={3}><br />
-                                <Button className="yc-btn-order"><p className="yc-btn-p">ORDER NOW!</p></Button>
+                            {/* <NavLink to="/checkout"><a id="ys-emptycar">empty car</a><a id="ys-checkout">checkout</a></NavLink> */}
+
+                            <NavLink to="/"><Button className="yc-btn-order"><p className="yc-btn-p">ORDER NOW!</p></Button></NavLink>
                             </Col>
                         </Row>
                     </Grid>
@@ -68,5 +85,5 @@ const Checkout = ({ reportAdd, total }) => {
 
     );
 }
-
-export default Checkout;
+const mapToProps = ({ foodUser, selectedSushiIndex }) => ({ foodUser, selectedSushiIndex });
+export default connect(mapToProps)(Checkout);
