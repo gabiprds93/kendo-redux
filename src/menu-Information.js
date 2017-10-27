@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./menu-Information.css";
 import { Grid, Row, Col } from "react-bootstrap";
 import Carousel from "./carousel.js";
+import store from './store';
+import {connect} from 'redux-zero/react';
 
 const MenuInformation = ({food, selectedItem }) => {
   return (
@@ -14,4 +16,7 @@ const MenuInformation = ({food, selectedItem }) => {
     </Grid>
   );
 };
-export default MenuInformation;
+
+const mapToProps = ({food, selectedItem}) => ({food, selectedItem});
+
+export default connect(mapToProps)(MenuInformation);
