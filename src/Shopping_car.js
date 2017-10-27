@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { connect } from "redux-zero/react";
 import Edamame from './images/edamame.jpg';
 import { Grid, Row, Col } from 'react-bootstrap';
-import {HashRouter, Switch, Route, NavLink} from 'react-router-dom';
+import { HashRouter, Switch, Route, NavLink } from 'react-router-dom';
 //import { addComment} from "./actions";
 import './shopping_car.css';
 
 const SushiDish = ({ image, price }) => {
-//const SushiDish = () => {
-//
+    //const SushiDish = () => {
+    //
     return (
 
         <li className="ys-selectedProdList" aria-selected="false">
@@ -20,35 +20,37 @@ const SushiDish = ({ image, price }) => {
 }
 
 const YourShoppingCar = () => {
-    let totalPrice = 0;
+    // let totalPrice = 0;
+    // totalPrice += price;
     return (
         <div id="ys-divshoppingcar">
             <h3>your<br />shopping car</h3>
-            <p className="ys-totalPrice">$0.00</p>
+            <p className="ys-totalPrice">00</p>
             <NavLink to="/checkout"><a id="ys-emptycar">empty car</a><a id="ys-checkout">checkout</a></NavLink>
         </div>
     );
 }
 
-const Shopping_car = ({ foodUser,selectedSushiIndex }) => {
-//const Shopping_car = () => {
+const Shopping_car = ({ foodUser, selectedSushiIndex }) => {
+    //const Shopping_car = () => {
     const UserSushi = foodUser.map((sushiUser, index) => {
-      return (
-        <SushiDish
-          key={index}
-          image={sushiUser.image}
-          price={sushiUser.price}
-        />
+        let priceDish = sushiUser.price;
+        console.log(priceDish)
+        return (
+            <SushiDish
+                key={index}
+                image={sushiUser.image}
+                price={sushiUser.price}
+            />
       );
     });
-
     return (
 
         <Grid className="container-fluid">
             <Row id="ys-shopInfo" className="active" >
                 <Col xs={12} md={9} className="divDish">
                     <ul id="ys-shopList" className="ys-widget ys-listview">
-                         {UserSushi}
+                        {UserSushi}
                     </ul>
                 </Col>
                 <YourShoppingCar />
@@ -58,5 +60,5 @@ const Shopping_car = ({ foodUser,selectedSushiIndex }) => {
     );
 }
 
-const mapToProps = ({ foodUser,selectedSushiIndex }) => ({ foodUser, selectedSushiIndex });
-export default connect (mapToProps)(Shopping_car);
+const mapToProps = ({ foodUser, selectedSushiIndex }) => ({ foodUser, selectedSushiIndex });
+export default connect(mapToProps)(Shopping_car);
