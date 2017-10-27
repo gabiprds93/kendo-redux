@@ -3,11 +3,12 @@ import logo from './logo.svg';
 import {connect} from 'redux-zero/react';
 import './App.css';
 import {addToCart} from './actions';
+import {selectMenu} from './actions.js'
 import { Grid, Row, Col, Thumbnail } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import {HashRouter, Switch, Route,NavLink,Redirect} from 'react-router-dom';
 
-
-const Maps = ({ item, index, addToCart }) => {
+const Maps = ({ item, index, selectMenu, addToCart }) => {
   return (
     <div className="y-aplates">
       <a className="view-details" href="#/menu/1">
@@ -26,9 +27,7 @@ const Home = ({ food, selectedItem }) => {
     <div className='y-acont'>
       {
         food.map((item, index) => {
-          return <Maps key={index} item={item} index={index} 
-          addToCart={()=>addToCart(index)}/>
-          
+          return <Maps key={index} item={item} index={index}  selectMenu={() =>selectMenu(index)  addToCart={()=>addToCart(index)} />
         })
       }
     </div>

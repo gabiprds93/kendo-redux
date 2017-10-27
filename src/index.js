@@ -10,6 +10,7 @@ import Home from './Home'
 import Shopping_car from './Shopping_car'
 import Checkout from './checkout'
 import yakiUdon from './images/logo.png';
+import MenuInformation from './menu-Information'
 
 const Index = ({ food }) => {
     return (
@@ -27,7 +28,8 @@ const Index = ({ food }) => {
                 <hr />
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path="/checkout" component={Checkout} />
+                        <Route path="/checkout" component={Checkout} /> 
+                        <Route path="/menuInformation" component={MenuInformation} />
                     </Switch>
                 </div>
             </HashRouter>
