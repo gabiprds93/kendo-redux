@@ -28,6 +28,7 @@ const Maps = ({ item, index }) => {
 const Home = ({ food, selectedItem }) => {
   return (
     <Grid>
+<<<<<<< HEAD
     <div className='y-acont'>
       {
         food.map((item, index) => {
@@ -36,6 +37,54 @@ const Home = ({ food, selectedItem }) => {
       }
     </div>
     </Grid>
+=======
+    <Row>
+        <Shopping_car />
+    </Row> 
+    <Row>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+      <Col xs={6} md={4}>
+        <Thumbnail src="" alt="242x200">
+          <h3>Thumbnail label</h3>
+          <p>Description</p>
+          <hr />
+          <button className="add-to-cart">Add to cart</button>
+        </Thumbnail>
+      </Col>
+    </Row>
+  </Grid>
+>>>>>>> 4c83e9ce03633bae94b4546bf7c9562b99a7c511
   )
 }
 
