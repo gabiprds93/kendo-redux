@@ -31,7 +31,7 @@ const Index = () =>
                 </Row>
                 <hr />
                 <Row>
-                    <Shopping_car/>
+                    <Shopping_car />
                 </Row>
                 <hr />
             </Grid> 
