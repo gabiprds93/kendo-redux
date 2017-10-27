@@ -3,6 +3,7 @@ import { connect } from "redux-zero/react";
 // import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
+import {totalPrice} from './actions';
 import './checkout.css';
 // importado de react-bootstrap
 import { Grid, Row, Col, Button } from 'react-bootstrap';
@@ -53,7 +54,7 @@ const Checkout = ({ foodUser, total }) => {
                                 <h7 className="yc-total">TOTAL:</h7>
                             </Col>
                             <Col className="yc-btnnow-col" sm={6} md={2}>
-                                <h2>$00</h2>
+                                <h2>${totalPrice().toFixed(2)}</h2>
                             </Col>
                         </Row>
                         <hr className="yc-hr" />
