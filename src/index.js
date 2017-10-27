@@ -7,6 +7,7 @@ import store from './store';
 import {HashRouter, Switch, Route,NavLink,Redirect} from 'react-router-dom';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Home from './Home'
+import Shopping_car from './Shopping_car'
 import Checkout from './checkout'
 import yakiUdon from './images/logo.png';
 
@@ -27,6 +28,10 @@ const Index = () =>
                             <span className="y-spanrosa"><span className="y-abtnp" >{}0</span>items</span>
                         </a>
                     </Col>
+                </Row>
+                <hr />
+                <Row>
+                    <Shopping_car/>
                 </Row>
                 <hr />
             </Grid> 
