@@ -7,6 +7,8 @@ import store from './store';
 import {HashRouter, Switch, Route} from 'react-router-dom';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Home from './Home'
+
+
 const Index = () => (
   <Provider store={store}>
     <HashRouter>
