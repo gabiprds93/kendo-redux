@@ -26,26 +26,38 @@
   font-size: 13px;
   vertical-align: top;
 }
+#m-small {
+  color: black;
+  
+}
 .m-colI h1 {
+  color: black;
   font-size: 36px;
   line-height: 27px;
   font-weight: normal;
 }
+.m-table > * {
+  color: black;
+  
+}
 .m-colI:first-child p {
+  color: black;
+  
   max-width: 300px;
   font-size: 12px;
 }
-
+.m-colI p {
+  color: black;
+  font-size: 40px !important;
+  color: #787878;
+}
 .m-table {
   padding: 6%;
 }
 .m-table tr td:first-child{
   color: #787878;  
 }
-#price-quantity {
-  font-size: 40px;
-  color: #787878;
-}
+
 .m-img {
   width: 50px;
   height: 50px;
