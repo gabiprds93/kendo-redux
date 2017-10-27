@@ -3,14 +3,26 @@ import { connect } from "redux-zero/react";
 // import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
-
 import './checkout.css';
-
 // importado de react-bootstrap
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 
 
-const Checkout = ({ }) => {
+const Checkout = ({ reportAdd, total }) => {
+    const ycProducts = reportAdd.map((sushi, index) => {
+        return (
+            <div>
+            <hr className="yc-hr" />
+            <Row className="show-grid yc-row" classID="">
+                < Col className="yc-report-col" sm={6} md={3}><br /><img src={sushi.image}></img></Col>
+                <Col className="yc-report-col" sm={6} md={3}><br />{sushi.name}</Col>
+                <Col className="yc-report-col" sm={6} md={3}><br /><input type="Number"></input></Col>
+                <Col className="yc-report-col" sm={6} md={3}><br />{sushi.price}</Col>
+            </Row>
+            </div>
+        );
+    });
+
     return (
         <div className="yc-container">
             <Grid className="yc-grid-container-image">
@@ -24,20 +36,13 @@ const Checkout = ({ }) => {
                             <Col className="yc-title-col" sm={6} md={3}><br />PRICE</Col>
                         </Row>
                         <hr className="yc-hr" />
-                        <Row className="show-grid yc-row">
-                            <Col className="yc-report-col" sm={6} md={3}><br />ITEM</Col>
-                            <Col className="yc-report-col" sm={6} md={3}><br /></Col>
-                            <Col className="yc-report-col" sm={6} md={3}><br />QUANTITY</Col>
-                            <Col className="yc-report-col" sm={6} md={3}><br />PRICE</Col>
-                        </Row>
-                        <hr className="yc-hr" />
                         <Row className="show-grid">
                             <Col className="yc-btnnow-col" sm={6} md={9}><br /></Col>
                             <Col className="yc-btnnow-col" sm={6} md={1}><br />
                                 <h7 className="yc-total">TOTAL:</h7>
                             </Col>
                             <Col className="yc-btnnow-col" sm={6} md={2}>
-                                <h2>S/.78.00</h2>
+                                <h2>${total.toFixed(2)}</h2>
                             </Col>
                         </Row>
                         <hr className="yc-hr" />
