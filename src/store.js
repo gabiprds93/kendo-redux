@@ -5,6 +5,7 @@ const initialState = {
     food: SUSHI,
     foodUser: [],
     selectedItem : -1,
+    
 }
 
 const store = createStore(initialState)

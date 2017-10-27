@@ -6,18 +6,14 @@ import {HashRouter, Switch, Route, NavLink} from 'react-router-dom';
 //import { addComment} from "./actions";
 import './shopping_car.css';
 
-//const SushiDish = ({ image, price }) => {
-const SushiDish = () => {
-
-    /* <div>
-        <img src={image} className="ys-Img" />
-        <p>1 x {price}</p>
-    </div> */
+const SushiDish = ({ image, price }) => {
+//const SushiDish = () => {
+//
     return (
 
         <li className="ys-selectedProdList" aria-selected="false">
-            <a className="ys-viewSelectedItem"><img width="100" height="100" src={Edamame} /></a>
-            <span className="ys-selectedImagePrice"><span>1</span>x<span>$4.2</span></span>
+            <a className="ys-viewSelectedItem"><img width="100" height="100" src={image} /></a>
+            <span className="ys-selectedImagePrice"><span>1</span>x<span>${price}</span></span>
         </li>
 
     );
@@ -34,17 +30,17 @@ const YourShoppingCar = () => {
     );
 }
 
-//const Shopping_car = ({ sushi }) => {
-const Shopping_car = () => {
-    /*const UserSushi = sushi.map((sushiUser, index) => {
+const Shopping_car = ({ foodUser,selectedSushiIndex }) => {
+//const Shopping_car = () => {
+    const UserSushi = foodUser.map((sushiUser, index) => {
       return (
         <SushiDish
           key={index}
           image={sushiUser.image}
-          name={sushiUser.price}
+          price={sushiUser.price}
         />
       );
-    });*/
+    });
 
     return (
 
@@ -52,7 +48,7 @@ const Shopping_car = () => {
             <Row id="ys-shopInfo" className="active" >
                 <Col xs={12} md={9} className="divDish">
                     <ul id="ys-shopList" className="ys-widget ys-listview">
-                        <SushiDish />
+                         {UserSushi}
                     </ul>
                 </Col>
                 <YourShoppingCar />
@@ -62,5 +58,5 @@ const Shopping_car = () => {
     );
 }
 
-//const mapToProps = ({ sushi, selectedSushiIndex }) => ({ sushi, selectedSushiIndex });
-export default Shopping_car;
+const mapToProps = ({ foodUser,selectedSushiIndex }) => ({ foodUser, selectedSushiIndex });
+export default connect (mapToProps)(Shopping_car);
