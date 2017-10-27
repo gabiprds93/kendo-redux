@@ -4,40 +4,29 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'redux-zero/react';
 import store from './store';
-import {HashRouter, Switch, Route,NavLink,Redirect} from 'react-router-dom';
-import {Grid, Row, Col} from 'react-bootstrap';
+import { HashRouter, Switch, Route, NavLink, Redirect } from 'react-router-dom';
+import { Grid, Row, Col } from 'react-bootstrap';
 import Home from './Home'
 import Checkout from './checkout'
 import yakiUdon from './images/logo.png';
 
-const Index = () => 
-{
-    return(
-        
-            <Provider store={store}>
-                <HashRouter>
-                <div >
-                <Grid className="y-acontain">
-                <Row className="show-grid">
-                    <Col xs={4} md={4}>
+const Index = ({ food }) => {
+    return (
+        <Provider store={store}>
+            <HashRouter>
+                <div className="y-acontain">
                     <NavLink to={"/"}><img src={yakiUdon} /></NavLink>
-                    </Col>
-                    <Col className="text-right" xs={8} md={8}>
-                        <a className="y-ashop" >Shopping Cart
-                            <span className="y-spanrosa"><span className="y-abtnp" >{}0</span>items</span>
-                        </a>
-                    </Col>
-                </Row>
-                <hr />
-            </Grid> 
+                    <NavLink to={"/"} className="y-ashop" >Shopping Cart
+                            <span className="y-spanrosa"><span className="y-abtnp">0</span>items</span>
+                    </NavLink>
+                    <hr />
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path="/checkout" component={Checkout} />        
+                        <Route path="/checkout" component={Checkout} />
                     </Switch>
-                    
-        </div>
-                </HashRouter>
-            </Provider>
+                </div>
+            </HashRouter>
+        </Provider>
     )
 }
 
