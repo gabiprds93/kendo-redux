@@ -5,7 +5,11 @@ import store from "./store";
 //     foodUser.push(userDish);
 // }
 export const selectMenu = (index) => {
-    console.log( 'selectMenu:',index)
+    console.log(index);
+    const selectMenu = index;
+    store.setState({
+        selectedItem:selectMenu
+    })
 };
 export const addToCart = (index) => {
     
@@ -19,6 +23,7 @@ export const addToCart = (index) => {
     store.setState({
         foodUser: addDish
     });
+
 }
 
 // funcion para el total del reporte
