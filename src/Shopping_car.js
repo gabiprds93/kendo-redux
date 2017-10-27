@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "redux-zero/react";
 import Edamame from './images/edamame.jpg';
-// import {totalPrice} from './actions';
+import {totalPrice} from './actions';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { HashRouter, Switch, Route, NavLink } from 'react-router-dom';
 //import { addComment} from "./actions";
@@ -26,7 +26,7 @@ const YourShoppingCar = () => {
     return (
         <div id="ys-divshoppingcar">
             <h3>your<br />shopping car</h3>
-            <p className="ys-totalPrice">00</p>
+            <p className="ys-totalPrice">${totalPrice().toFixed(2)}</p>
             <NavLink to="/checkout"><a id="ys-emptycar">empty car</a><a id="ys-checkout">checkout</a></NavLink>
         </div>
     );
